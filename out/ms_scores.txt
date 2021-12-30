@@ -1,0 +1,9 @@
+word1: "Vienna" found "Salzburg" -> score: 0.78
+word1: "Vienna" found "Austria" -> score: 0.78
+word1: "Vienna" found "Prague" -> score: 0.77
+word2: "Austria" found "Austria-" -> score: 0.81
+word2: "Austria" found "Vienna" -> score: 0.78
+word2: "Austria" found "German-Austria" -> score: 0.76
+word3: "cat" found "cats" -> score: 0.84
+word3: "cat" found "housecat" -> score: 0.77
+word3: "cat" found "-cat" -> score: 0.76

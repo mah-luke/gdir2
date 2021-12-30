@@ -1,0 +1,4 @@
+pair 1: ("cat", "dog") -> similarity: 0.75
+pair 2: ("cat", "Vienna") -> similarity: 0.17
+pair 3: ("Vienna", "Austria") -> similarity: 0.78
+pair 4: ("Austria", "dog") -> similarity: 0.22
