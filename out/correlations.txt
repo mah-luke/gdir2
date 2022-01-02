@@ -1,0 +1,3 @@
+For TfIdfVectorizer Method the correlation was 0.71
+For Mean Averaging Method the correlation was 0.58
+For Weighted Averaging Method the correlation was 0.58
