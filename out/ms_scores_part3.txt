@@ -1,0 +1,3 @@
+word1: "spiel" found "game" -> score: 0.74
+word1: "spiel" found "heimspiel" -> score: 0.71
+word1: "spiel" found "gegentor" -> score: 0.71
