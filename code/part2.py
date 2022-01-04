@@ -20,12 +20,16 @@ def preprocess_arr():
         text[1] = text[1].lower()
         text[1] = "".join([char for char in text[1] if char not in string.punctuation])
         text[1] = word_tokenize(text[1])
-        text[1] = [word for word in text[1] if word not in stop_words]
+
+        # comment the next line to include stopwords
+        #text[1] = [word for word in text[1] if word not in stop_words]
 
         text[2] = text[2].lower()
         text[2] = "".join([char for char in text[2] if char not in string.punctuation])
         text[2] = word_tokenize(text[2])
-        text[2] = [word for word in text[2] if word not in stop_words]
+
+        # comment the next line to include stopwords
+        #text[2] = [word for word in text[2] if word not in stop_words]
 
         lis.append(text)
 
@@ -120,7 +124,8 @@ def printable_res(corrlist: list):
                f"For Mean Averaging Method the correlation was {'{:.2f}'.format(corrlist[1])}",
                f"For Weighted Averaging Method the correlation was {'{:.2f}'.format(corrlist[2])}"]
 
-    save(os.path.join(os.getcwd(), '..', 'out'), lis_str, 'correlations.txt')
+    # change the name of the file to save different files
+    save(os.path.join(os.getcwd(), '..', 'out'), lis_str, 'correlations_with_stopwords.txt')
 
 
 def save(path, data: list, name: str):
@@ -143,8 +148,6 @@ if __name__ == "__main__":
         vec_sm_gt.append(cos_sim[0])
 
     pearson_corr.append(pearsonr(vec_sm_cos_sim, vec_sm_gt)[0])
-
-    word_vec = KeyedVectors.load_word2vec_format(os.path.join(os.getcwd(), '..', 'wiki-news-300d-1M-subword.vec'))
 
     vec_lm_mean = []
     for row in ru:

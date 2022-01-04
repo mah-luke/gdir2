@@ -56,13 +56,15 @@ def save(path, data: list, name: str):
 
 
 if __name__ == "__main__":
-    df = load_data('../german-tweet-sample-2019-08')
-    preprocess_data_and_train(df)
-    model = preprocess_data_and_train(df)
-    print(model.most_similar('spiel', topn=3))
+    # df = load_data('../german-tweet-sample-2019-08')
+    # preprocess_data_and_train(df)
+    # model = preprocess_data_and_train(df)
+    # print(model.most_similar('spiel', topn=3))
 
-    # # uncomment all lines above and comment only the next line to retrain model
-    # model = KeyedVectors.load_word2vec_format(os.path.join(os.getcwd(), '..', 'german-tweet-model.vec'))
-    dic1 = {'spiel': model.most_similar('spiel', topn=3)}
+    # uncomment all lines above and comment only the next line to retrain model
+    model = KeyedVectors.load_word2vec_format(os.path.join(os.getcwd(), '..', 'german-tweet-model.vec'))
+    dic1 = {'spiel': model.most_similar('spiel', topn=3),
+            'polizei': model.most_similar('polizei', topn=3),
+            'berlin': model.most_similar('berlin', topn=3)}
     printable_ms(dic1)
 

@@ -1,3 +1,9 @@
 word1: "spiel" found "game" -> score: 0.74
 word1: "spiel" found "heimspiel" -> score: 0.71
 word1: "spiel" found "gegentor" -> score: 0.71
+word2: "polizei" found "polizisten" -> score: 0.70
+word2: "polizei" found "täter" -> score: 0.63
+word2: "polizei" found "kriminalpolizei" -> score: 0.62
+word3: "berlin" found "berliner" -> score: 0.76
+word3: "berlin" found "hamburg" -> score: 0.63
+word3: "berlin" found "münchen" -> score: 0.63
